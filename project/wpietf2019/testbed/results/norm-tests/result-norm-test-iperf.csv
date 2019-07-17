@@ -1,0 +1,5 @@
+Scenario "Num Flows" Metric P-Value
+sfc_p4tables 1 jitter 4.51e-01
+sfc_p4tables 20000 jitter 7.85e-01
+sfc_p4tables 40000 jitter 4.09e-01
+sfc_without_mon 40000 jitter 6.80e-01

@@ -1,0 +1,7 @@
+Scenario "Num Flows" "Packet Size" Metric P-Value
+sfc_p4tables 1 512 bandwidth-mbps 3.60e-01
+sfc_p4tables 1 512 latency 7.73e-02
+sfc_p4tables 20000 512 bandwidth-mbps 4.21e-01
+sfc_sfcmon 40000 512 bandwidth-mbps 2.14e-01
+sfc_sfcmon 40000 512 latency 4.41e-01
+sfc_sfcmon 40000 512 jitter 6.60e-01

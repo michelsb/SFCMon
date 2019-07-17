@@ -57,3 +57,11 @@ Other auxiliary commands:
 
 ## Usage
 
+For the WPIETF 2019, we performed two experiments:
+
+ 1. To evaluate the SFCMon's ability to detect large flows, we developed a Python program that simulates its execution.
+* [SFCMon Simulator](./project/wpietf2019/sfcmon-simulator)
+ 
+ 2. We implement a Proof-of-Concept (PoC) framework aiming to validate and evaluate the SFCMon. By using our PoC framework, we perform experiments aiming to evaluate the SFCMon regarding its performance and scalability.
+* [SFCMon's PoC](./project/wpietf2019/testbed) 
+ 

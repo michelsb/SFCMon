@@ -65,3 +65,6 @@ For the WPIETF 2019, we performed two experiments:
  2. We implement a Proof-of-Concept (PoC) framework aiming to validate and evaluate the SFCMon. By using our PoC framework, we perform experiments aiming to evaluate the SFCMon regarding its performance and scalability.
 * [SFCMon's PoC](./project/wpietf2019/testbed) 
  
+## Notes
+
+This work was partially funded by the National Science Foundation (NSF-USA) and the Rede Nacional de Ensino e Pesquisa (RNP-Brazil) under the "EAGER: USBRCCR: Securing Networks in the Programmable Data Plane" project.

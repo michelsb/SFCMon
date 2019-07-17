@@ -45,9 +45,15 @@ You will need to build a virtual machine. For this, follow the steps below:
  
 Other auxiliary commands:
 
-- Accessing the VM: `vagrant ssh`
-- Halt the VM: `vagrant halt` (outside VM) or `sudo shutdown -h now` (inside VM)
-- Destroy the VM: `vagrant destroy
+         # Accessing the VM: 
+         vagrant ssh
+        
+         # Halt the VM: 
+         vagrant halt (outside VM)
+         sudo shutdown -h now (inside VM)
+      
+         # Destroy the VM: 
+         vagrant destroy
 
 ## Usage
 

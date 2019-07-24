@@ -35,7 +35,7 @@ You will need to build a virtual machine. For this, follow the steps below:
          # Clone the git repo.
          git clone https://github.com/michelsb/SFCMon.git
  
- 5. Deploy the VM with vagrant:
+ 5. Deploy the VM with vagrant (install all P4 dependencies):
  
          # Go to the appropriated directory.
          cd SFCMon/create-dev-env
@@ -54,6 +54,57 @@ Other auxiliary commands:
       
          # Destroy the VM: 
          vagrant destroy
+
+## Custom Hash Functions
+
+The SFCMon requires custom hash functions that use different unique primes for each stage, so that the same flow can be hashed to multiple slots in the hash table in multiple stages. Below, we describe the operations required to enable the new hash functions.
+
+First, we need to access the VM:
+
+         # Go to the appropriated directory.
+         cd SFCMon/create-dev-env
+
+         # Deploy the VM with vagrant.
+         vagrant ssh
+
+Second, we need to extend behavioral-model (bmv2), a public-domain P4 virtual switch, to enable support for multiple pairwise independent hash functions. For this, we implemented the algorithm MurmurHash35, which yields the 32-bit hash value. Next, we define 22 independent hash functions by just varying the seed of MurmurHash3. Adding these hash functions to the behavioral-model is simple. Please, follow the steps below:
+
+ 1. Replace the original simple_switch.cpp for our extended file:
+
+        sudo cp /srv/p4-extensions/simple_switch.cpp ~/behavioral-model/targets/simple_switch/simple_switch.cpp
+
+ 2. Once doing this remake bmv2:
+
+        NUM_CORES=`grep -c ^processor /proc/cpuinfo`
+        cd behavioral-model
+        ./autogen.sh
+        ./configure --enable-debugger --with-pi
+        make -j${NUM_CORES}
+        sudo make install
+
+        # Simple_switch_grpc target
+        cd targets/simple_switch_grpc
+        ./autogen.sh
+        ./configure --with-thrift
+        make -j${NUM_CORES}
+        sudo make install
+
+Finally, we need to update some p4c files in order to make the new hash functions available for P4 programs. Please, follow the steps below:
+
+ 1. Replace the following files for our extending files:
+
+        sudo cp /srv/p4-extensions/v1model.p4 ~/p4c/p4include/v1model.p4
+        sudo cp /srv/p4-extensions/simpleSwitch.cpp ~/p4c/backends/bmv2/simpleSwitch.cpp
+
+ 2. Once doing this remake p4c:
+
+        cd p4c
+        mkdir -p build
+        cd build
+        cmake ..
+        make -j${NUM_CORES}
+        make -j${NUM_CORES} check
+        sudo make install
 
 ## Usage
 

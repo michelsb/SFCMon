@@ -100,6 +100,7 @@ Finally, we need to update some p4c files in order to make the new hash function
  2. Once doing this remake p4c:
 
         cd ~/p4c
+        rm -rf build
         mkdir -p build
         cd build
         cmake ..

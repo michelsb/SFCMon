@@ -120,7 +120,7 @@ For the WPIETF 2019, we performed two experiments:
 
 If you use SFCMon for your research and/or other publications, please cite the following paper to reference our work:
 
-BONFIM, Michel ; DIAS, Kelvin ; FERNANDES , Stenio . SFCMon: An Efficient and Scalable Monitoring System for Network Flows in SFC-enabled Domains. In: WORKSHOP PRÉ-IETF (WPIETF), 6. , 2019, Belém. Proceedings of the VI Pre-IETF Workshop. Porto Alegre: Sociedade Brasileira de Computação, july 2019 . ISSN 2595-6388. 
+BONFIM, Michel ; DIAS, Kelvin ; FERNANDES , Stenio . [**SFCMon: An Efficient and Scalable Monitoring System for Network Flows in SFC-enabled Domains**](https://sol.sbc.org.br/index.php/wpietf/article/view/6581). In: WORKSHOP PRÉ-IETF (WPIETF), 6. , 2019, Belém. Proceedings of the VI Pre-IETF Workshop. Porto Alegre: Sociedade Brasileira de Computação, july 2019 . ISSN 2595-6388. 
 
 Bibtex:
 

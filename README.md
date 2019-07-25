@@ -4,7 +4,7 @@
 
 Repository for SFCMon, an efficient and scalable monitoring solution to keep track network  ows in SFC-enabled domains.
 
-## Software Requirements
+## Software requirements
 
 The virtualization software is portable and should run on a few OSes:
 
@@ -55,7 +55,7 @@ Other auxiliary commands:
          # Destroy the VM: 
          vagrant destroy
 
-## Custom Hash Functions
+## Custom hash functions
 
 The SFCMon requires custom hash functions that use different unique primes for each stage, so that the same flow can be hashed to multiple slots in the hash table in multiple stages. Below, we describe the operations required to enable the new hash functions.
 
@@ -115,6 +115,29 @@ For the WPIETF 2019, we performed two experiments:
  
  2. We implement a Proof-of-Concept (PoC) framework aiming to validate and evaluate the SFCMon. By using our PoC framework, we perform experiments aiming to evaluate the SFCMon regarding its performance and scalability.
 * [SFCMon's PoC](./project/wpietf2019/testbed) 
+
+## Cite this work
+
+If you use SFCMon for your research and/or other publications, please cite the following paper to reference our work:
+
+BONFIM, Michel ; DIAS, Kelvin ; FERNANDES , Stenio . SFCMon: An Efficient and Scalable Monitoring System for Network Flows in SFC-enabled Domains. In: WORKSHOP PRÉ-IETF (WPIETF), 6. , 2019, Belém. Proceedings of the VI Pre-IETF Workshop. Porto Alegre: Sociedade Brasileira de Computação, july 2019 . ISSN 2595-6388. 
+
+Bibtex:
+
+```bibtex
+@inproceedings{wpietf,
+ author = {Michel  Bonfim and Kelvin  Dias and Stenio  Fernandes	},
+ title = {SFCMon: An Efficient and Scalable Monitoring System for Network Flows in SFC-enabled Domains},
+ booktitle = {Proceedings of the VI Pre-IETF Workshop},
+ location = {Belém},
+ year = {2019},
+ keywords = {},
+ issn = {2595-6388},
+ publisher = {SBC},
+ address = {Porto Alegre, RS, Brasil},
+ url = {https://sol.sbc.org.br/index.php/wpietf/article/view/6581}
+}
+```
  
 ## Notes
 

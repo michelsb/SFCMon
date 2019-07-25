@@ -76,7 +76,7 @@ Second, we need to extend behavioral-model (bmv2), a public-domain P4 virtual sw
  2. Once doing this remake bmv2:
 
         NUM_CORES=`grep -c ^processor /proc/cpuinfo`
-        cd behavioral-model
+        cd ~/behavioral-model
         ./autogen.sh
         ./configure --enable-debugger --with-pi
         make -j${NUM_CORES}
@@ -94,11 +94,12 @@ Finally, we need to update some p4c files in order to make the new hash function
  1. Replace the following files for our extending files:
 
         sudo cp /srv/p4-extensions/v1model.p4 ~/p4c/p4include/v1model.p4
+        sudo cp /srv/p4-extensions/v1model.h ~/p4c/frontends/p4/fromv1.0/v1model.h
         sudo cp /srv/p4-extensions/simpleSwitch.cpp ~/p4c/backends/bmv2/simpleSwitch.cpp
 
  2. Once doing this remake p4c:
 
-        cd p4c
+        cd ~/p4c
         mkdir -p build
         cd build
         cmake ..

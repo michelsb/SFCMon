@@ -45,7 +45,7 @@ You will need to build a virtual machine. For this, follow the steps below:
  
 Other auxiliary commands:
 
-         # Accessing the VM: 
+         # Access the VM: 
          vagrant ssh
         
          # Halt the VM: 
@@ -64,7 +64,7 @@ First, we need to access the VM:
          # Go to the appropriated directory.
          cd SFCMon/create-dev-env
 
-         # Deploy the VM with vagrant.
+         # Access the VM.
          vagrant ssh
 
 Second, we need to extend behavioral-model (bmv2), a public-domain P4 virtual switch, to enable support for multiple pairwise independent hash functions. For this, we implemented the algorithm MurmurHash35, which yields the 32-bit hash value. Next, we define 22 independent hash functions by just varying the seed of MurmurHash3. Adding these hash functions to the behavioral-model is simple. Please, follow the steps below:
